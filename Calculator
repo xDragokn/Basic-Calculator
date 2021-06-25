@@ -1,0 +1,83 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main ()
+{
+  int n2, n1, math;
+
+  char choice;
+  do
+    {
+      do
+	{
+	  cout <<
+	    "Enter Input (1 - S; 2 - A; 3 - M; 4 - D; 5 - P; 6 - SQRT): ";
+	  cin >> math;
+	}
+      while (math > 6);
+
+      if (math == 1) // Subtraction
+	{			
+	  cout << "Enter first number: " << endl;
+	  cin >> n1;
+	  cout << "Enter second number: " << endl;
+	  cin >> n2;
+	  cout << n1 << " minus " << n2 << " is " << n1 - n2 << endl;
+	}
+
+      if (math == 2) // Addition
+	{			
+	  cout << "Enter first number: " << endl;
+	  cin >> n1;
+	  cout << "Enter second number: " << endl;
+	  cin >> n2;
+	  cout << n1 << " plus " << n2 << " is " << n1 + n2 << endl;
+	}
+
+      if (math == 3) // Multiplication
+	{			
+	  cout << "Enter first number: " << endl;
+	  cin >> n1;
+	  cout << "Enter second number: " << endl;
+	  cin >> n2;
+	  cout << n1 << " times " << n2 << " is " << n1 * n2 << endl;
+	}
+
+      if (math == 4) // Division
+	{			
+	  cout << "Enter first number: " << endl;
+	  cin >> n1;
+	  cout << "Enter second number: " << endl;
+	  cin >> n2;
+	  cout << n1 << " divided by " << n2 << " is " << (float) n1 /
+	    n2 << endl;
+	}
+
+      if (math == 5) // Powers
+	{			
+	  cout << "Enter first number: " << endl;
+	  cin >> n1;
+	  cout << "Enter second number: " << endl;
+	  cin >> n2;
+	  cout << n1 << " to the power of " << n2 << " is " << pow (n1,
+								    n2) <<
+	    endl;
+	}
+
+      if (math == 6) // Squareroot
+	{			
+	  cout << "Enter number: " << endl;
+	  cin >> n1;
+	  cout << "The square root of " << n1 << " is " << sqrt (n1) << endl;
+	}
+
+      cout << "Do you want to do it again? (y/n): ";
+      cin >> choice;
+
+    }
+  while (choice == 'y');
+
+  return 0;
+}
